@@ -1,0 +1,348 @@
+@import url(nav.css);
+@import url(footer.css);
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #eee;
+
+}
+
+.aaa {
+    display: contents;
+    margin-top: 25px;
+}
+
+.video {
+    height: 100vh;
+}
+
+.video video {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+
+#coll .small {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #666;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* product */
+
+.product-container {
+    overflow: hidden;
+    width: auto;
+}
+
+.home-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.home-image .home-image-in {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 12px solid var(--px-gray-3);
+    box-shadow: 0 0 0 12px var(--px-gray-1);
+}
+
+.home-image-in img {
+    width: 100%;
+    height: 100%;
+}
+
+/* about us  */
+#about {
+    padding-left: 150px;
+    border-radius: 5px;
+}
+
+#about p {
+    font-size: 25px;
+    color: #000000;
+    padding-right: 100px;
+}
+
+.about-text {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* concat us */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.row {
+    float: left;
+    padding: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* concat us animation */
+
+.images {
+    margin-left: auto;
+    width: 300px;
+}
+
+.images img {
+    border-radius: 100%;
+}
+
+.big-circle {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 3px solid #bbbbbb;
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    animation: Rotate 20s linear infinite;
+    -webkit-animation: Rotate 20s linear infinite;
+}
+
+.icon-block {
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+.icon-block img {
+    margin: 10px;
+    width: 60%;
+    animation: Rotate-reverse 20s linear infinite;
+    -webkit-animation: Rotate-reverse 20s linear infinite;
+}
+
+
+
+.icon-block:first-child {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.icon-block:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+}
+
+.icon-block:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+}
+
+.icon-block:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.rounding-sec {
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+
+.images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* keyframe animation */
+
+/* from: This specifies the starting point of the animation, where the element is transformed using transform: rotate(0deg);,
+ meaning it is initially not rotated (0 degrees).
+
+to: This specifies the ending point of the animation, where the element is transformed using transform: rotate(360deg);,
+ meaning it is rotated 360 degrees clockwise. */
+@keyframes Rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* The @-webkit-keyframes rule is specifically used to define keyframes for CSS animations in WebKit-based browsers such as Safari and some older versions of Chrome. */
+@-webkit-keyframes Rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes Rotate-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes Rotate-reverse {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+/* 0%: This specifies the starting point of the animation. At 0% of the animation's duration, the element is transformed using transform: translateX(-100px); which moves the element 100 pixels to the left along the x-axis, and opacity: 0; which sets the opacity of the element to 0, making it fully transparent. */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* opacity: 1; which sets the opacity of the element to 1, making it fully opaque. */
+        opacity: 1;
+    }
+}
+
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Form input styles */
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Submit button styles */
+form input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Submit button hover styles */
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .about-text {
+        /* float: right; */
+        font-size: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+}
