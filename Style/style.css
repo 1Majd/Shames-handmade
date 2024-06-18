@@ -346,3 +346,22 @@ form input[type="submit"]:hover {
     }
 
 }
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+        /* Adjust font size for even smaller screens */
+    }
+
+    .about-text {
+        font-size: 10px;
+        /* Adjust font size */
+    }
+}
